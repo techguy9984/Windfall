@@ -1,0 +1,16 @@
+Versions
+
+3/17/16
+Alpha 0.0.5
+-Basic isometric engine with zooming and panning
+-Can draw up to 5 tile layers
+-Groundwork for a clean & beautiful UI
+-Tileset image loader
+Alpha 0.0.6
+-Added SmartUI components
+TODO
+-Finish UIButtongroup
+-Fix controls
+-Min and Max pans
+-Limit zooming
+-Loading int maps from a configuration file
