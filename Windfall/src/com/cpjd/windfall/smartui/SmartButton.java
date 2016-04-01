@@ -7,6 +7,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
@@ -59,8 +60,13 @@ public class SmartButton {
 	// rotate vars
 	int degree;
 	
+	// factors variable required for Smartbutton
+	ArrayList<Integer> factors;
+	
 	// Load the image with a normal image, and a clicked image
 	public SmartButton(String imgLoc, String clickLoc) {
+		factors = new ArrayList<Integer>();
+		
 		try {
 			mode = 0;
 			
@@ -76,6 +82,8 @@ public class SmartButton {
 	
 	// The button will contain a normal image, hover image, and click image
 	public SmartButton(String imgLoc, String hoverLoc, String clickLoc) {
+		factors = new ArrayList<Integer>();
+		
 		try {
 			mode = 1;
 			
@@ -92,6 +100,7 @@ public class SmartButton {
 	
 	// The button will play an animation when hovered
 	public SmartButton(String framesLoc, String clickLoc, int frameWidth, int frameHeight, int delay) {
+		factors = new ArrayList<Integer>();
 
 		try {
 			mode = 2;
@@ -258,6 +267,10 @@ public class SmartButton {
 	public void setPos(int x, int y) {
 		this.x = x; this.y = y;
 	}
+	public void setPos(Point p) {
+		this.x = p.x;
+		this.y = p.y;
+	}
 	public int getX() {
 		return x;
 	}
@@ -299,5 +312,20 @@ public class SmartButton {
 		} else {
 			return false;
 		}
+	}
+	public void addFactor(int factor) {
+		factors.add(factor);
+	}
+	public int getArraySize() {
+		return factors.size();
+	}
+	public ArrayList<Integer> getFactorsArray() {
+		return factors;
+	}
+	public int getFactor(int index) {
+		return factors.get(index);
+	}
+	public void clearArray() {
+		factors.clear();
 	}
 }

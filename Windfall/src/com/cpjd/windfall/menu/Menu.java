@@ -33,8 +33,6 @@ public class Menu extends GameState {
 	
 		load = new SmartButton("/UI/create.png","/UI/exit.png","/UI/load.png");
 		load.setBulge(true);
-		load.setPos(35, 35);
-		load.setSlide(true);
 		//load.setRotate(true);
 		
 		leaderboard = new SmartButton("/UI/leaderboard.png","/UI/leaderboardClicked.png");
@@ -49,7 +47,7 @@ public class Menu extends GameState {
 		
 		configButtons = new SmartButton[5];
 		configButtons[0] = create;
-		configButtons[1] = create;
+		configButtons[1] = load;
 		configButtons[2] = leaderboard;
 		configButtons[3] = options;
 		configButtons[4] = exit;
