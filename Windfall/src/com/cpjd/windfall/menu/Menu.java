@@ -11,6 +11,7 @@ import com.cpjd.windfall.gamestate.GameStateManager;
 import com.cpjd.windfall.main.GamePanel;
 import com.cpjd.windfall.smartui.SmartButton;
 import com.cpjd.windfall.smartui.SmartButtonGroup;
+import com.cpjd.windfall.smartui.SmartField;
 
 public class Menu extends GameState {
 	
@@ -24,6 +25,8 @@ public class Menu extends GameState {
 	SmartButton play2, load;
 	
 	SmartButtonGroup buttons;
+	
+	SmartField test;
 	
 	public Menu(GameStateManager gsm) {
 		super(gsm);
@@ -61,10 +64,14 @@ public class Menu extends GameState {
 			Log.logError(e, Log.RES_LOAD_ERROR);
 		}
 		
+		test = new SmartField();
+		//test.setBounds(20, 20, 200, 50);
 	}
 	
 	public void update() {
 		buttons.update();
+		
+		test.update();
 	}
 
 	public void draw(Graphics2D g) {
@@ -73,7 +80,21 @@ public class Menu extends GameState {
 		
 		buttons.draw(g);
 		
+		test.draw(g);
+		
 
+	}
+
+	@Override
+	public void keyPressed(int k) {
+		//test.keyPressed(k);
+		
+	}
+
+	@Override
+	public void keyReleased(int k) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

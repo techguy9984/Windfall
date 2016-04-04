@@ -57,5 +57,14 @@ public class GameStateManager {
 			gameStates[currentState].draw(g);
 		}
 	}
+	public void keyPressed(int k) {
+		if (gameStates[currentState] != null)
+			gameStates[currentState].keyPressed(k);
+	}
+	public void keyReleased(int k) {
+
+		if (gameStates[currentState] != null)
+			gameStates[currentState].keyReleased(k);
+	}
 
 }
