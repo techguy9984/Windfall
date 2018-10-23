@@ -1,5 +1,5 @@
 package com.cpjd.windfall.entity;
-//Fuck the police - DAMN STRAIGHT MOFO
+
 import java.awt.image.BufferedImage;
 
 /* Animation for map objects, handles sprite animation */
